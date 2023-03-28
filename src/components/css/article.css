@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@700&display=swap');
+
+
+.article {
+    background-image: url('./grad.png'),linear-gradient(180deg, rgba(0,0,0,0) 33%, #22222288 66%, #22222288 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 200px;
+    background-blend-mode: multiply;
+    background-color: #22222288;
+}
+    
+* {
+    color: #ffffffdd;
+}
+
+.article {
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.article h1,
+.article h2,
+.article h3,
+.article h4 {
+    font-family: 'Cinzel', serif;
+}
+
+.article .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.article .sidebar {
+    height: 100%;
+    width: 25%;
+    padding: 1rem 1rem;
+}
+
+.article .sidebar-main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    border-right: 2px solid white;
+}
+
+.article .sidebar-main a:first-child {
+    width: 100%;
+    /* height: fit-content; */
+}
+
+
+.article .sidebar-main h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.article .toc {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article .toc h2 {
+    font-size: 1.2rem;
+}
+
+.article .toc ul {
+    padding-left: 1rem;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+}
+
+
+.article .toc li {
+    font-family: 'Fauna One', sans-serif;
+    line-height: 1.5rem;
+    letter-spacing: .4px;
+    margin-bottom: 1.5rem;
+}
+
+.article .body {
+    margin: 1rem 0;
+    width: 100%;
+    font-family: 'Fauna One';
+    scroll-behavior: smooth;
+    overflow: auto;
+}
+
+.article .body::-webkit-scrollbar-thumb {
+    background-color: #ffffffaa;
+}
+
+.article .body-main {}
+
+.article .body-main>h1 {
+    padding: 2rem 2rem 4rem;
+    font-size: 2.5rem;
+}
+
+.article .body-main .sep {
+    margin: 0 .5rem;
+}
+
+.article .share-side {
+    width: 10%;
+    height: 100%;
+    padding: 1rem;
+}
+
+.article .share-side-main {
+    height: 100%;
+    border-left: 2px solid white;
+}
+
+.article .content {
+    border-top: 1px solid white;
+    margin-top: 1rem;
+    position: relative;
+    padding: 2rem 0;
+}
+
+
+/* .article .content .back-2 {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25%;
+    filter: grayscale(1);
+} */
+
+
+.article .markdown {
+    font-family: 'Nunito', sans-serif;
+    padding: 0 2rem;
+}
+
+.article .markdown>h1,
+.article .markdown>h2,
+.article .markdown>h3,
+.article .markdown>h4,
+.article .markdown>h5,
+.article .markdown>h6 {
+    margin: 3rem 0 .5rem;
+}
+
+.article .markdown h2 {
+    font-size: 1.8rem !important;
+}
+
+.article .markdown p,
+.article .markdown li {
+    word-spacing: .25rem;
+}
+
+.article .markdown li {
+    margin: .25rem 0;
+}
+
+.article .markdown ul,
+.article .markdown ol {
+    margin: .5rem 0;
+}
+
+.article .markdown .avatar {
+    float: right;
+    width: 40%;
+    min-height: 300px;
+    font-family: 'Redressed', sans-serif;
+    filter: grayscale(.8);
+    border: 1px solid #ffffff44;
+    border-radius: .25rem;
+    /* position:static; */
+    margin-left: .5rem;
+    transform-origin: 100% 50%;
+    overflow: hidden;
+    transition: filter ease-out 1s .5s, transform ease-in .5s;
+}
+
+.article .markdown .avatar img {
+    width: 100%;
+}
+
+.article .markdown .avatar span {
+    display: block;
+    text-align: center;
+    margin: .25rem 0;
+}
+
+.article .markdown .avatar:hover {
+    filter: grayscale(0);
+    transform: scale(1.2);
+}
+
+.article .markdown iframe {
+    border: 2px solid #ffffff66;
+    padding: .25rem;
+    margin-bottom: 2rem;
+}
+
+.article .markdown p,
+.article .markdown li {
+    font-size: 1.2rem;
+    /* font-weight: 300; */
+}
+
+.article .bottom-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 1rem;
+    ;
+}
+
+.article .bottom-links a {
+    width: 100%;
+    padding: .5rem;
+}
+
+.article .bottom-links button {
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: all ease-out .3s;
+    border: 4px solid #1DB954;
+    font-family: 'Signika', sans-serif;
+    background-color: black;
+}
+
+.article .bottom-links .spotify svg {
+    margin-right: .5rem;
+    background-color: black;
+    border-radius: 100%;
+}
+
+.article .bottom-links .spotify svg * {
+    color: #1DB954 !important;
+}
+
+.article .bottom-links .spotify:hover {
+    background-color: white;
+    color: black;
+}
+
+.article .bottom-links .website {
+    border-color: white;
+    transition: all ease-out .3s;
+}
+
+.article .bottom-links .website img {
+    height: 1em;
+    /* aspect-ratio: 1/1; */
+    margin-right: .5rem;
+    transition: all ease-out .3s;
+}
+
+.article .bottom-links .website:hover {
+    background-color: white;
+    color: black;
+}
+
+
+.article .bottom-links .website:hover>img {
+    filter: invert(1);
+}

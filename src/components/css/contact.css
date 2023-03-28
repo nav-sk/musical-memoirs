@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+
+footer.contact {
+    width: 100%;
+    border-top: 2px solid white;
+    padding: 3rem 1rem 1rem;
+    position: relative;
+    background-color: #00000088;
+}
+
+.contact::before, .contact::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2rem;
+    aspect-ratio: 1/1;
+    top: 0;
+    border: .25rem solid black;
+    margin: 0 1.5px;
+    transform: translateY(-50%);
+    border-radius: 100%;
+    z-index: 1;
+    background-color: white;
+    outline: 2px solid white;
+}
+
+.contact::before{
+    left: 0;
+}
+
+.contact::after{
+    right: 0;
+}
+
+.contact h2{
+    text-align: center;
+    color: white;
+    font-family: 'Cinzel';
+    font-weight: 500;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+
+.contact .gmap_canvas {
+    filter: grayscale(1);
+    width: fit-content;
+    padding: .25rem .25rem 0;
+    border-radius: .5rem;
+    box-shadow: 0 0 15px 2px #00000033 inset;
+    border: 2px solid white;
+}
+
+.contact iframe {
+    border: none;
+    border-radius: .25rem;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-main {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: space-between;
+    color: white;
+}
+
+.contact-address{
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    /* align-self: self-start; */
+}
+
+.contact-main h3{
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.contact-address p {
+    font-family: 'Fauna One', serif;
+    letter-spacing: .7px;
+    line-height: 1.5rem;
+    padding-top: 1rem;
+}
+
+.site-links {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 1rem;
+    padding-left: 1rem;
+    position: relative;
+    height: fit-content;
+    overflow-y: hidden;
+}
+
+.site-links::before{
+    content: "";
+    height: 100% ;
+    width: 1px;
+    background-color: white;
+    z-index: -1;
+    margin-left: -1rem;
+    position: absolute;
+}
+
+.site-links ul {
+    padding-left: 0;
+    font-family: 'Fauna One';
+    line-height: 1.5rem;
+    letter-spacing: .7px;
+}
+
+.site-links li{
+    list-style: none; 
+}
+
+
+.site-links li::before{
+    content: "\2666";
+    padding-right: .5rem;
+}
+
+.site-links a{
+    text-decoration: none;
+    color: white;
+}
+
+.contact-details {
+    display: flex;
+    position: relative;
+    margin: 2rem 4rem 2rem 1rem;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.contact-details::before{
+    content: "";
+    height: 100%;
+    width: 1px;
+    position: absolute;
+    margin-left: -1rem;
+    background-color: white;
+}
+
+.contact-details p{
+    font-family: 'Fauna One', serif;
+    line-height: 2rem;
+    letter-spacing: .3px;
+}
+
+.contact-details a {
+    margin: 0 .25rem;
+}
+
+.contact-details div > a> svg{
+    width: 1.5rem;
+    aspect-ratio: 1/1;
+    height: 1.5rem;
+}
+
+.contact .made-by {
+    color: #ffffffcc;
+    text-align: center;
+}
+
+.copyrights {
+    font-family: 'Fauna One', serif;
+    font-size: .8rem;
+    color: #ffffff88;
+    letter-spacing: .5px;
+    word-spacing: 2px;
+}

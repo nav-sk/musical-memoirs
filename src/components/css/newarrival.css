@@ -1,0 +1,206 @@
+.new-arrival {
+    color: white
+}
+
+
+.new-arrival-main {
+    margin-bottom: 50px;
+}
+
+.new-arrival-main>h2 {
+    text-align: center;
+    font-family: 'Cinzel';
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin-top: -1px;
+    font-weight: 400;
+    padding: 10px 0;
+    font-size: 2rem;
+}
+
+.new-arrival-main> h2[top=0]{
+    background: linear-gradient(black 50%, transparent);
+}
+
+.new-container {
+    margin-top: 100px;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.new-container::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    background: white;
+}
+
+
+.new-side {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.new-side:first-child:not(.spacer) {
+    align-items: end;
+    margin-right: 100px;
+}
+
+.new-side:last-child:not(.spacer) {
+    align-items: start;
+    margin-left: 100px;
+}
+
+.new-side .spacer {
+    padding: 75px 0;
+    width: 100%;
+}
+
+.new-item {
+    width: 75%;
+    position: relative;
+    border: 2px solid white;
+    background-color: black;
+    height: 200px;
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+
+.new-side:last-child>.new-item:first-child {
+    margin-top: 200px;
+}
+
+.new-side:last-child>.new-item:last-child {
+    margin-bottom: 1rem;
+}
+
+.new-side:first-child>.new-item::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    border-radius: 5px;
+    width: 100px;
+    background-color: #fff;
+    transform: translateY(-50%);
+    left: 100%;
+    top: 50%;
+}
+
+.new-side:first-child>.new-item::before {
+    content: "";
+    width: 1.5rem;
+    display: block;
+    height: 1.5rem;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: calc(100% + 100px);
+    background-color: #fff;
+    top: 50%;
+}
+
+.new-side:last-child>.new-item::before {
+    content: "";
+    width: 1.5rem;
+    display: block;
+    height: 1.5rem;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(50%, -50%);
+    right: calc(100% + 100px);
+    background-color: #fff;
+    top: 50%;
+}
+
+.new-side:last-child>.new-item::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    border-radius: 5px;
+    width: 100px;
+    background-color: #fff;
+    transform: translateY(-50%);
+    right: 100%;
+    top: 50%;
+    z-index: 2;
+}
+
+.new-item-container {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    padding: .25rem;
+    transform: scale(1,1);
+    transition: transform ease-in-out .2s;
+}
+
+.new-item-container:hover{
+    transform: scale(.98, .96);
+}
+
+.new-item-container>img {
+    border-radius: 6px 0 0 6px;
+    width: 200px;
+    filter: grayscale(1);
+    transition: filter ease-in-out 3s;
+    mask-image: linear-gradient(-90deg, transparent, black 60%);
+}
+
+.new-item-container:hover > img {
+    filter: grayscale(0);
+}
+
+.new-item-container>div>h3 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+}
+
+.new-item-container>div>div>p {
+    line-clamp: 3;
+    overflow: hidden;
+    font-family: 'Fauna One', sans-serif;
+    font-size: .8rem;
+    letter-spacing: 1px;
+    line-height: calc(1rem + 2px);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.new-item-container div.item-footer {
+    color: #ffffffaa;
+    justify-content: space-between;
+    padding: 0 1rem 1rem;
+}
+
+.new-item-container >div > .read{
+    position: absolute;
+    bottom: -4rem;
+    left: 50%;
+    width: 100%;
+    opacity: 0;
+    background: black;
+    transform: translateX(-50%);
+    text-align: center;
+    padding-bottom: 2rem;
+    font-family: 'Cinzel', serif;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: bottom ease-out .2s, opacity ease-out .2s;
+}
+
+.new-item-container:hover >div > .read{
+    bottom: 0rem;
+    opacity: 1;
+}

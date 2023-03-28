@@ -1,0 +1,69 @@
+header {
+    color: white;
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    user-select: none;
+}
+
+header h1 {
+    font-weight: 500;
+    border-bottom: 1px solid white;
+    border-width: 1px;
+    position: absolute;
+    left: 50%;
+    /* padding-top: rem; */
+    transform: translateX(-50%);
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+}
+
+header.desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem 0;
+}
+
+header.desktop li {
+    text-decoration: none;
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    padding-left: 0;
+}
+
+header.desktop li::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    background: white;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    height: 2px;
+    border-radius: 100%;
+    transition: width ease-out .3s, left ease-out .3s;
+}
+
+header.desktop ul {
+    font-weight: 500;
+}
+
+/* header.desktop ul.left :not(:first-child) {
+    margin-left: 1.5rem;
+} */
+
+header.desktop ul.right :not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+header.desktop li:hover::after {
+    width: 100%;
+    left: 0;
+}
