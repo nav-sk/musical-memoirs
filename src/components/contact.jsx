@@ -34,8 +34,8 @@ export const Contact = props => {
                     </div>
                     <div className='contact-details'>
                         <h3>Contact:</h3>
-                        <p><b>PHONE:</b> +91 1234 567 890</p>
-                        <p><b>E-MAIL:</b> abc@xyx.pq</p>
+                        <p><b>PHONE:</b> +91 7010 466 023</p>
+                        <p><b>E-MAIL:</b> naveensk@zohomail.in</p>
                         <p>On Social Media:</p>
                         <div>
                             <a href='https://github.com/nav-sk' target='blank'><FaGithubSquare /></a>

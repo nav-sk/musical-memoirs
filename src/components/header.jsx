@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import logo from '../assets/logo.png'
 import './css/header.css';
 
@@ -15,9 +16,9 @@ const Desktop = props => {
         <img src={logo}/>
         <h1>Musical Memoirs</h1>
         <ul className="right">
-            <li>Portfolio</li>
-            <li>Contact</li>
-            <li>About Us</li>
+            <Link to='/portfolio'><li>Portfolio</li></Link>
+            <a href='#contact'><li>Contact</li></a>
+            <a href="#newsletter"><li>About Us</li></a>
 
         </ul>
     </header>

@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { AiOutlineHeart } from 'react-icons/ai';
-import { FaDiscord, FaFacebook, FaFacebookF, FaInstagram, FaLinkedin, FaLinkedinIn, FaSpotify, FaTwitter, FaWhatsapp } from 'react-icons/fa';
+import { FaDiscord, FaFacebook, FaFacebookF, FaInstagram, FaLinkedinIn, FaSpotify, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import remarkGfm from 'remark-gfm';
-import rehypeHighlight from 'rehype-highlight';
 import { blogData } from './data/blogData';
 import { Loader } from './loader';
 import './css/article.css';
@@ -15,6 +14,8 @@ export const Article = props => {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState({});
+
+    const shareText = `Music lovers, you won't want to miss my latest blog post featuring exclusive insights into the lives of your favorite artists..\nClick on the link below:\n` + window.location.origin + window.location.pathname;
 
     useEffect(() => {
         if (typeof blogData[artist] === typeof undefined) {
@@ -50,7 +51,6 @@ export const Article = props => {
                     </div>
                     <div className='content'>
                         <Markdown content={data.content} avatar={[data.avatarLink, data.avatarCaption]} data={data} />
-                        {/* <img className='back-2' src='https://lastfm.freetls.fastly.net/i/u/770x0/e6a4d07a9499cc1c868a6f9c696c9454.jpg#e6a4d07a9499cc1c868a6f9c696c9454'/> */}
                     </div>
                     <div className='bottom-links'>
                         <a href={data.spotifyProfile} target="_blank"><button className='spotify'><FaSpotify />Follow on Spotify</button></a>
@@ -61,8 +61,8 @@ export const Article = props => {
             <aside className='share-side'>
                 <div className='share-side-main'>
                     <div className='share-container'>
-                        <a><FaWhatsapp /></a>
-                        <a><FaFacebookF /></a>
+                        <a href={"whatsapp://send??text="+shareText}><FaWhatsapp /></a>
+                        <a href={'https://www.facebook.com/sharer.php?u='+encodeURIComponent(shareText)} target='_blank'><FaFacebookF /></a>
                         <a><FaInstagram /></a>
                         <a><FaLinkedinIn /></a>
                         <a><FaTwitter /></a>
@@ -128,27 +128,4 @@ const CustomFigure = props => {
 
 const CustomHr = () => {
     return <p style={{ borderTop: '1px solid red', margin: '1.5rem 0' }} />
-}
-
-const CustomCode = ({ inline, node, children }) => {
-
-    // const match = /language-(\w+)/.exec(node.properties.className || '')
-    // return !inline && match ? (
-    //     <ReactSyntaxHighlighter
-    //         children={String(children).replace(/\n$/, '')}
-    //         // style={'dark'}
-    //         language={match[1]}
-    //         PreTag="div"
-
-    //     />
-    // ) : (
-    //     <code className={node.properties.className} {...node}>
-    //         {children}
-    //     </code>
-    // )
-
-
-    return <div className='code'>
-        <code>{children}</code>
-    </div>
 }

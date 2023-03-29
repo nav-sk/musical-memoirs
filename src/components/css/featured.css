@@ -1,6 +1,6 @@
 section.featured {
     position: relative;
-    color: white;
+    color: #ffffffcc;
     padding: 130px 0 130px;
     height: 100vh;
     display: flex;
@@ -17,6 +17,7 @@ section.featured {
     background: linear-gradient(90deg, #ffffff22 30%, #ffffffbb 100%);
     background-clip: text;
     color: transparent;
+    user-select: none;
     padding: 3rem 1rem 0;
     padding-top: calc(3rem - 3px);
 }
@@ -114,9 +115,10 @@ section.featured {
 .carousel-content>div>a:link,
 .carousel-content>div>a:visited,
 .carousel-content>div>a:active {
-    color: white;
     text-underline-offset: 3px;
-    padding-top: 3rem;
+    color: #ffffffcc;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
     padding-right: 2rem;
     text-align: right;
 }

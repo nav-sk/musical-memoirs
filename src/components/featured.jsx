@@ -22,7 +22,7 @@ const Carousel = props => {
                 return <div className='carousel-item' key={i}>
                 <div className='carousel-content'>
                     <img src={data.avatarLink} />
-                    <div>
+                    <div style={{display: "flex", flexDirection: "column", justifyContent: 'space-between'}}>
                         <h3>{data.title}</h3>
                         <p>{data.content.split('\n')[0]}</p>
                         <Link to={'/article/'+el}>Read More</Link>

@@ -21,6 +21,10 @@ header ul {
     padding-left: 0;
 }
 
+header a{
+    color: white;
+}
+
 header.desktop {
     display: flex;
     flex-direction: row;

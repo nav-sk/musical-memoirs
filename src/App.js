@@ -12,6 +12,7 @@ function App() {
   
   useEffect(() => {
     document.title = 'Musical Memoirs';
+    window.scrollTo(0, 0);
     AOS.init({mirror: true});
   }, []);
 
