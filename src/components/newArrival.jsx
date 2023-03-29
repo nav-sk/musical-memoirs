@@ -1,9 +1,7 @@
 import React from 'react';
 import './css/newarrival.css';
-import ScrollReveal from 'scrollreveal';
 import { useEffect } from 'react';
-import AOS from 'aos';
-
+import { blogData, newArrival } from './data/blogData';
 
 const NewItem = (props) => {
     return <div className='new-item'>
@@ -18,7 +16,7 @@ const NewItem = (props) => {
                     <p>20 min read</p>
                     <p>12/03/2023</p>
                 </div>
-                <p className='read'> Read Now</p>
+                <p className='read'>Read Now</p>
             </div>
         </div>
     </div>
@@ -26,11 +24,16 @@ const NewItem = (props) => {
 
 const NewArrival_ = props => {
     useEffect(() => {
-        document.querySelectorAll('.new-side:first-child > .new-item').forEach(el=>el.setAttribute('data-aos', 'fade-right'));
-        document.querySelectorAll('.new-side:last-child > .new-item').forEach(el=>el.setAttribute('data-aos', 'fade-left'));
-        AOS.init();
-        // ScrollReveal().reveal('.new-side:first-child > .new-item', { delay: 300, distance: '100px', origin: 'left', reset: false, viewFactor:.8 });
-        // ScrollReveal().reveal('.new-side:last-child > .new-item', { delay: 300, distance: '100px', origin: 'right', reset: false, viewFactor:.8 });
+        document.querySelectorAll('.new-side:first-child > .new-item').forEach(el => { el.setAttribute('data-aos', 'fade-right'); el.setAttribute('data-aos-offset', '0'); });
+        document.querySelectorAll('.new-side:last-child > .new-item').forEach(el => { el.setAttribute('data-aos', 'fade-left'); el.setAttribute('data-aos-offset', '0'); });
+        document.querySelectorAll('.new-side > .new-item').forEach((el, i)=>{
+            let container = el.children[0];
+            container.children[0].src=newArrival[i].avatarLink;
+            container.children[1].children[0].innerText = blogData[newArrival[i]].title.split('-')[0];
+            container.children[1].children[1].children[0].innerText = blogData[newArrival[i]].content.split('\n');
+            // TODO: Continue here..
+        });
+
     }, []);
 
     return <div id="new-arrival" className='new-arrival-main'>

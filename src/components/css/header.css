@@ -55,6 +55,12 @@ header.desktop ul {
     font-weight: 500;
 }
 
+header.desktop img {
+    width: 3rem;
+    aspect-ratio: 1/1;
+    /* margin-left: 1rem; */
+}
+
 /* header.desktop ul.left :not(:first-child) {
     margin-left: 1.5rem;
 } */

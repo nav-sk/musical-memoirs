@@ -13,9 +13,8 @@ section.featured {
     font-size: 8rem;
     position: absolute;
     height: fit-content;
-    z-index: -1;
     left:0;
-    background: linear-gradient(90deg, #ffffff22 30%, #ffffffcc 100%);
+    background: linear-gradient(90deg, #ffffff22 30%, #ffffffbb 100%);
     background-clip: text;
     color: transparent;
     padding: 3rem 1rem 0;
@@ -37,6 +36,7 @@ section.featured {
     background: black;
     width: 100%;
     padding: 0 1rem;
+    z-index: 2;
 }
 
 .carousel::before {
@@ -68,19 +68,19 @@ section.featured {
 }
 
 .carousel-content>img {
-    min-width: 50%;
+    min-width: 40%;
     height: 100%;
     border-radius: .7rem 0 0 .7rem;
     object-fit: cover;
     filter: grayscale(1);
     -webkit-filter: grayscale(1);
-    transition: filter ease-out 2s;
+    transition: filter ease 2s 1s;
     mask-image: linear-gradient(90deg, black 20%, transparent);
 }
 
 
 .carousel-content>img:hover{
-    filter: grayscale(0)
+    filter: grayscale(0);
 }
 
 .carousel-content>div {
@@ -91,7 +91,7 @@ section.featured {
 
 .carousel-content>div>h3 {
     font-weight: 600;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     padding: 1rem 0;
 }
 
@@ -100,7 +100,13 @@ section.featured {
     font-size: 1.10rem;
     /* font-weight: 400; */
     letter-spacing: 1.35px;
-    word-spacing: 2px;
+    word-spacing: 3px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    /* height: calc(1.6rem * 5); */
+    -webkit-line-clamp: 6;
+    text-overflow: ellipsis;
+    overflow: hidden;
     line-height: 1.6rem;
 }
 
@@ -126,7 +132,7 @@ section.featured {
 
 .featured .caret {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     cursor: pointer;
     animation: bounce 1s infinite;
     color: white;

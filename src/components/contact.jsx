@@ -15,7 +15,7 @@ export const Contact = props => {
                 </div>
                 <div className='contact-address'>
                     <h3>Location:</h3>
-                    <p>Chennai Institute of Technology,<br />Sarathy Nagar, Kundrathur,<br />Chennai-69</p>
+                    <p>Chennai Institute of Technology,<br />Sarathy Nagar, Kundrathur,<br />Chennai-69.</p>
                     <div>
                         <p></p>
                     </div>
@@ -38,10 +38,10 @@ export const Contact = props => {
                         <p><b>E-MAIL:</b> abc@xyx.pq</p>
                         <p>On Social Media:</p>
                         <div>
-                            <a><FaGithubSquare /></a>
-                            <a><FaLinkedin /></a>
-                            <a><FaTwitterSquare /></a>
-                            <a><FaInstagram /></a>
+                            <a href='https://github.com/nav-sk' target='blank'><FaGithubSquare /></a>
+                            <a href='https://linkedin.com/in/sk-naveen' target='blank'><FaLinkedin /></a>
+                            <a href='https://twitter.com/NaveenSK_14' target='_blank'><FaTwitterSquare /></a>
+                            <a href='https://instagram.com/s._k._naveen' target='blank'><FaInstagram /></a>
                         </div>
                     </div>
                 </div>

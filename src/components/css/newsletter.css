@@ -29,7 +29,7 @@
 
 .newsletter form input{
     display: block;
-    background-color: black;
+    background-color: transparent;
     font-family: 'Cinzel', serif;
     appearance: none;
     width: 400px;
@@ -63,7 +63,7 @@
     margin: 2rem 0;
     font-family: 'Cinzel', serif;
     appearance: none;
-    background: black;
+    background: #00000066;
     border: 2px solid white;
     border-radius: .5rem;
     color: white;

@@ -20,7 +20,7 @@ export const NewsLetter = props => {
         
     }
 
-    return <div className='newsletter'>
+    return <div className='newsletter' data-aos='fade-up' data-aos-offset='0'>
         <p className='head'>Want to engage with us?</p>
         <p className='body'>Subscribe to our newsletter</p>
         <form onSubmit={onFormSubmit}>

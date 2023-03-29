@@ -1,59 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { AiOutlineHeart } from 'react-icons/ai';
-import { FaSpotify } from 'react-icons/fa';
-import './css/article.css';
+import { FaDiscord, FaFacebook, FaFacebookF, FaInstagram, FaLinkedin, FaLinkedinIn, FaSpotify, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import { blogData } from './data/blogData';
-import {Loader} from './loader';
-
-
-// // const cont = `Alan Walker is a Norwegian DJ and music producer who shot to fame with his hit song "Faded" in 2015. Since then, he has become a global EDM superstar, known for his unique sound, captivating performances, and signature mask and hoodie.
-
-// ## Notable Concerts
-
-// Alan Walker has performed at many notable concerts and festivals around the world, including:
-
-// - **Tomorrowland:** One of the biggest music festivals in the world, held annually in Belgium. Walker has performed at Tomorrowland multiple times, including in 2017 and 2019.
-// - **Coachella:** One of the most famous music festivals in the world, held annually in California. Walker made his Coachella debut in 2018.
-// - **Nobel Peace Prize Concert:** An annual concert held in Oslo, Norway to celebrate the winner of the Nobel Peace Prize. Walker performed at the concert in 2018.
-
-// ## Unique Sound
-
-// Alan Walker's music is known for its unique sound, which features heavy use of vocal chops and melodic hooks. He often incorporates elements of orchestral music and cinematic soundscapes into his tracks, giving them an epic and emotional feel.
-
-// ## Spotify Albums
-
-// Alan Walker has released two studio albums on Spotify:
-
-// - "Different World" (2018): This album features the hit songs "Faded" and "Alone," as well as collaborations with artists such as Sofia Carson and K-391.
-//   - Listen on [Spotify](https://open.spotify.com/album/4gtxw8WwfpBJj4q3hnl9GJ?si=Ce9zD_EfTHKKxujjKupmCg)
-// - "Walker Racing League Season 1" (2021): This album features 16 tracks, each named after a different racing track. The album was inspired by Walker's love of racing and features collaborations with artists such as CORSAK and Iselin Solheim.
-//   - Listen on [Spotify](https://open.spotify.com/album/6DyG8s0eTDtR27j7VJehWx?si=Zc2jTzzTQJqNWfd8WlFbrg)
-
-// ## Collaborations
-
-// Alan Walker has collaborated with many other artists in the music industry. Some of his notable collaborations include:
-
-// - Zara Larsson: In 2017, Walker collaborated with Swedish singer Zara Larsson on the song "Ruin My Life." The song was a commercial success and reached the top 10 in several countries.
-// - Sabrina Carpenter: In 2018, Walker teamed up with American singer Sabrina Carpenter on the track "On My Way." The song has over 500 million views on YouTube and reached the top 10 in several countries.
-// - Ava Max: In 2020, Walker collaborated with American singer Ava Max on the song "Alone, Pt. II." The song has over 300 million views on YouTube and has charted in several countries.
-
-// ## Charitable Work
-
-// In addition to his music career, Alan Walker is also involved in charitable work. In 2016, he partnered with the Norwegian charity organization SOS Children's Villages to create a campaign to help refugees in Syria. The campaign raised over $200,000 for the cause.
-
-// Walker has also been an ambassador for the FIA Foundation's #3500LIVES campaign, which aims to raise awareness about road safety. He has also supported other charitable organizations such as Save the Children and The Ocean Cleanup.
-
-// ## Future Plans
-
-// Alan Walker shows no signs of slowing down. In a recent interview, he stated that he plans to release more music in the near future, including collaborations with other artists. He also hinted at the possibility of a new album in the works.
-
-// Fans can look forward to more music from him in the future, and it will be exciting to see what he has in store for us.
-
-// // `;
+import { Loader } from './loader';
+import './css/article.css';
+import logo from '../assets/logo.png';
 
 export const Article = props => {
     const { artist } = useParams();
@@ -66,7 +21,8 @@ export const Article = props => {
             navigate('/404', { replace: true })
         } else {
             setData(blogData[artist]);
-            setTimeout(()=>setLoading(false), 2000);
+            document.title =  artist.split('-').map(el=>el[0].toUpperCase()+el.slice(1)).join(' ') + ' | Musical Memoirs'
+            setTimeout(() => setLoading(false), 2000);
 
         }
     }, []);
@@ -75,7 +31,7 @@ export const Article = props => {
         <div className='main'>
             <div className='sidebar'>
                 <div className='sidebar-main'>
-                    <Link to='/'><h1>Musical Memoirs</h1></Link>
+                    <Link to='/'><img src={logo}/></Link>
                     <div className='toc'>
                         <h2>Table of Contents:</h2>
                         <ul>
@@ -90,10 +46,10 @@ export const Article = props => {
                     <h1 id="top">{data.title}</h1>
                     <div style={{ display: 'flex', alignItems: 'center', paddingLeft: "2rem", justifyContent: 'space-between' }}>
                         <span><span style={{ fontFamily: '"Redressed", sans-serif', 'fontSize': '1.3rem' }}>{data.author}</span><span className='sep'>{'\u2022'}</span><span>{data.username}</span><span className='sep'>{'\u2022'}</span>{data.time}<span className='sep'>{'\u2022'}</span>{data.date}</span>
-                        <span style={{ display: 'inline-flex', alignItems: 'center', marginRight: "2rem", fontSize: '1.3rem' }}><AiOutlineHeart style={{ marginRight: '.5rem' }} />{data.likes+ " Like"+(data.likes==1?"":"s")} </span>
+                        <span style={{ display: 'inline-flex', alignItems: 'center', marginRight: "2rem", fontSize: '1.3rem' }}><AiOutlineHeart style={{ marginRight: '.5rem' }} />{data.likes + " Like" + (data.likes == 1 ? "" : "s")} </span>
                     </div>
                     <div className='content'>
-                        <Markdown content={data.content} avatar={[data.avatarLink, data.avatarCaption]} data={data}/>
+                        <Markdown content={data.content} avatar={[data.avatarLink, data.avatarCaption]} data={data} />
                         {/* <img className='back-2' src='https://lastfm.freetls.fastly.net/i/u/770x0/e6a4d07a9499cc1c868a6f9c696c9454.jpg#e6a4d07a9499cc1c868a6f9c696c9454'/> */}
                     </div>
                     <div className='bottom-links'>
@@ -102,12 +58,21 @@ export const Article = props => {
                     </div>
                 </div>
             </div>
-            <div className='share-side'>
-                <div className='share-side-main'></div>
+            <aside className='share-side'>
+                <div className='share-side-main'>
+                    <div className='share-container'>
+                        <a><FaWhatsapp /></a>
+                        <a><FaFacebookF /></a>
+                        <a><FaInstagram /></a>
+                        <a><FaLinkedinIn /></a>
+                        <a><FaTwitter /></a>
+                        <a><FaDiscord /></a>
+                    </div>
+                </div>
 
-            </div>
+            </aside>
         </div>
-        <Loader display={loading}/>
+        <Loader display={loading} />
     </div>
 }
 
@@ -129,7 +94,7 @@ const Markdown = props => {
         document.querySelectorAll('.markdown a').forEach(el => {
             el.setAttribute('target', '_blank');
         });
-        
+
 
         document.querySelectorAll('.markdown h2').forEach(el => {
             el.setAttribute('id', el.innerText);
@@ -143,7 +108,9 @@ const Markdown = props => {
             let i = 0;
             document.querySelectorAll('li').forEach(el => {
                 if (el.children[0] && el.children[0].tagName === 'A' && el.children[0].innerHTML === 'Spotify') {
-                    el.innerHTML = props.data.albumLinks[i];
+                    // el.innerHTML = props.data.albumLinks[i];
+                    el.removeChild(el.children[0]);
+                    el.innerHTML = el.innerHTML +  props.data.albumLinks[i];
                     el.style.listStyle = 'none';
                     el.parentElement.style.paddingLeft = 0;
                     i++;

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import logo from '../assets/logo.png'
 import './css/header.css';
 
 const Mobile = props => {
@@ -11,9 +12,7 @@ const Mobile = props => {
 
 const Desktop = props => {
     return <header className="desktop">
-        <ul className="left">
-
-        </ul>
+        <img src={logo}/>
         <h1>Musical Memoirs</h1>
         <ul className="right">
             <li>Portfolio</li>

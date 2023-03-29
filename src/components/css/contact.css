@@ -7,7 +7,9 @@ footer.contact {
     position: relative;
     background-color: #00000088;
 }
-
+footer.contact a{
+    color: white;
+}
 .contact::before, .contact::after {
     content: "";
     display: block;
@@ -48,6 +50,11 @@ footer.contact {
     border-radius: .5rem;
     box-shadow: 0 0 15px 2px #00000033 inset;
     border: 2px solid white;
+    transition: filter ease 2s;
+}
+
+.contact .gmap_canvas:hover{
+    filter: grayscale(0);
 }
 
 .contact iframe {
