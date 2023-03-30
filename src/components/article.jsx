@@ -15,14 +15,14 @@ export const Article = props => {
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState({});
 
-    const shareText = `Music lovers, you won't want to miss my latest blog post featuring exclusive insights into the lives of your favorite artists..\nClick on the link below:\n` + window.location.origin + window.location.pathname;
+    const shareText = `Music lovers, you won't want to miss my latest blog post featuring exclusive insights into the lives of your favorite artists..\nClick on the link below:\n`;
 
     useEffect(() => {
         if (typeof blogData[artist] === typeof undefined) {
             navigate('/404', { replace: true })
         } else {
             setData(blogData[artist]);
-            document.title =  artist.split('-').map(el=>el[0].toUpperCase()+el.slice(1)).join(' ') + ' | Musical Memoirs'
+            document.title = artist.split('-').map(el => el[0].toUpperCase() + el.slice(1)).join(' ') + ' | Musical Memoirs'
             setTimeout(() => setLoading(false), 2000);
 
         }
@@ -32,7 +32,7 @@ export const Article = props => {
         <div className='main'>
             <div className='sidebar'>
                 <div className='sidebar-main'>
-                    <Link to='/'><img src={logo}/></Link>
+                    <Link to='/'><img src={logo} /></Link>
                     <div className='toc'>
                         <h2>Table of Contents:</h2>
                         <ul>
@@ -61,11 +61,13 @@ export const Article = props => {
             <aside className='share-side'>
                 <div className='share-side-main'>
                     <div className='share-container'>
-                        <a href={"whatsapp://send??text="+shareText}><FaWhatsapp /></a>
-                        <a href={'https://www.facebook.com/sharer.php?u='+encodeURIComponent(shareText)} target='_blank'><FaFacebookF /></a>
+                        <a href={"whatsapp://send??text=" + shareText + window.location.origin + window.location.pathname}><FaWhatsapp /></a>
+                        <a href={'https://www.facebook.com/sharer.php?description=' + encodeURIComponent(window.location.origin + window.location.pathname)} target='_blank'><FaFacebookF /></a>
                         <a><FaInstagram /></a>
-                        <a><FaLinkedinIn /></a>
-                        <a><FaTwitter /></a>
+                        <a href={`
+https://www.linkedin.com/shareArticle?mini=true&url=${window.location.origin + window.location.pathname}&title=Musical%20Memoirs&summary=` + shareText} target="_blank"><FaLinkedinIn /></a>
+                        <a href={`
+http://twitter.com/share?text=${shareText}&url=${window.location.origin + window.location.pathname}`} target='_blank'><FaTwitter /></a>
                         <a><FaDiscord /></a>
                     </div>
                 </div>
@@ -78,15 +80,9 @@ export const Article = props => {
 
 const Markdown = props => {
     const [content, setContent] = useState("");
-    const elements = [
-        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/3nzuGtN3nXARvvecier4K0?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
-        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/4pOEwzaAsyQwh40tCEEcVV?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`
-    ];
-
     useEffect(() => {
         const cont = `![${props.avatar[1]}](${props.avatar[0]}) ` + props.content;
         setContent(cont)
-        console.log(props)
     }, [props]);
 
     useEffect(() => {
@@ -98,7 +94,6 @@ const Markdown = props => {
 
         document.querySelectorAll('.markdown h2').forEach(el => {
             el.setAttribute('id', el.innerText);
-            console.log(el);
             toc += `<a href="#${el.innerText}"><li>${el.innerText}</li></a> `;
         });
 
@@ -108,9 +103,8 @@ const Markdown = props => {
             let i = 0;
             document.querySelectorAll('li').forEach(el => {
                 if (el.children[0] && el.children[0].tagName === 'A' && el.children[0].innerHTML === 'Spotify') {
-                    // el.innerHTML = props.data.albumLinks[i];
                     el.removeChild(el.children[0]);
-                    el.innerHTML = el.innerHTML +  props.data.albumLinks[i];
+                    el.innerHTML = el.innerHTML + props.data.albumLinks[i];
                     el.style.listStyle = 'none';
                     el.parentElement.style.paddingLeft = 0;
                     i++;
@@ -119,13 +113,9 @@ const Markdown = props => {
         })();
 
     }, [content]);
-    return <ReactMarkdown className='markdown' components={{ hr: CustomHr, img: CustomFigure }} remarkPlugins={[remarkGfm]} children={content} />;
+    return <ReactMarkdown className='markdown' components={{ img: CustomFigure }} remarkPlugins={[remarkGfm]} children={content} />;
 }
 
 const CustomFigure = props => {
     return <span className='avatar'><img src={props.src} /><span>{props.alt}</span></span>
-}
-
-const CustomHr = () => {
-    return <p style={{ borderTop: '1px solid red', margin: '1.5rem 0' }} />
 }

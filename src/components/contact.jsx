@@ -5,7 +5,6 @@ import './css/contact.css';
 export const Contact = props => {
 
     return <footer className='contact' id='contact'>
-        {/* <h2>Contact</h2> */}
         <div className='contact-main'>
             <div style={{ display: 'flex', flexDirection: 'row' }}>
                 <div className="mapouter">
@@ -21,8 +20,8 @@ export const Contact = props => {
                     </div>
                 </div>
             </div>
-            <div style={{display: 'flex', flexShrink: 0, flexGrow: 1, flexDirection: 'column'}}>
-                <div style={{display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'space-evenly'}}>
+            <div style={{ display: 'flex', flexShrink: 0, flexGrow: 1, flexDirection: 'column' }}>
+                <div style={{ display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'space-evenly' }}>
                     <div className='site-links'>
                         <h3>Site Links:</h3>
                         <ul>
@@ -45,7 +44,7 @@ export const Contact = props => {
                         </div>
                     </div>
                 </div>
-                <div style={{alignSelf: "flex-end"}}><p className='copyrights'>Copyright &copy; 2023 | All rights reserved</p></div>
+                <div style={{ alignSelf: "flex-end" }}><p className='copyrights'>Copyright &copy; 2023 | All rights reserved</p></div>
             </div>
         </div>
 

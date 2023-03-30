@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -8,6 +8,7 @@ import { Page404 } from './components/404';
 import { Portfolio } from './components/portfolio';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+setTimeout(() => { console.clear(); console.log('What the freak are you doing here? Go back to Website Now!')}, 10000);
 root.render(
   <React.StrictMode>
     <BrowserRouter>

@@ -9,7 +9,7 @@ const pageStyle = {
     alignItems: 'center'
 }
 
-const svgStyle  = {
+const svgStyle = {
     fontSize: '6rem',
     fontFamily: 'Redressed',
     color: 'white'
@@ -22,9 +22,9 @@ const capStyle = {
     marginTop: '2rem'
 }
 
-export const Portfolio = props =>{
+export const Portfolio = props => {
     return <div style={pageStyle}>
-        <IoMdConstruct style={svgStyle}/>
+        <IoMdConstruct style={svgStyle} />
         <h2 style={capStyle}>Portfolio page is under construction</h2>
     </div>
 }

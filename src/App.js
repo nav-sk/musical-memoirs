@@ -9,20 +9,20 @@ import 'aos/dist/aos.css';
 import './components/css/app.css';
 
 function App() {
-  
+
   useEffect(() => {
     document.title = 'Musical Memoirs';
     window.scrollTo(0, 0);
-    AOS.init({mirror: true});
+    AOS.init({ mirror: true });
   }, []);
 
   return (
     <div className="App">
-      <Header/>
-      <Featured/>
-      <NewArrival/>
-      <NewsLetter/>
-      <Contact/>
+      <Header />
+      <Featured />
+      <NewArrival />
+      <NewsLetter />
+      <Contact />
     </div>
   );
 }

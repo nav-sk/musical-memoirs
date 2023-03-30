@@ -1,7 +1,5 @@
-
-
 .article {
-    background-image: url('./grad.png'), linear-gradient(180deg, #00000066 0%, #000000aa 50%, black 100%);
+    background-image: url('../../assets/grad.png'), linear-gradient(180deg, #00000066 0%, #000000aa 50%, black 100%);
     background-repeat: no-repeat;
     background-size: 100% 250px, 100% 260px;
     background-blend-mode: multiply;
@@ -9,7 +7,6 @@
 
 .article * {
     color: #ffffffcc;
-    /* color: white; */
 }
 
 
@@ -51,7 +48,7 @@ a {
     border-right: 2px solid white;
 }
 
-.article .sidebar-main > a:first-child {
+.article .sidebar-main>a:first-child {
     width: 100%;
     height: fit-content;
     display: flex;
@@ -153,11 +150,11 @@ a {
 }
 
 
-.article .share-side .share-container a{
+.article .share-side .share-container a {
     position: relative;
 }
 
-.article .share-side .share-container a:after{
+.article .share-side .share-container a:after {
     content: 'Share to';
     font-family: 'Redressed', sans-serif;
     color: white !important;
@@ -174,7 +171,7 @@ a {
 }
 
 
-.article .share-side .share-container a:hover:after{
+.article .share-side .share-container a:hover:after {
     right: calc(200%);
     width: 90px;
 }
@@ -199,16 +196,6 @@ a {
     position: relative;
     padding: 2rem 0;
 }
-
-
-/* .article .content .back-2 {
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 25%;
-    filter: grayscale(1);
-} */
 
 
 .article .markdown {
@@ -280,7 +267,6 @@ a {
 .article .markdown p,
 .article .markdown li {
     font-size: 1.2rem;
-    /* font-weight: 300; */
 }
 
 .article .bottom-links {
@@ -334,7 +320,6 @@ a {
 
 .article .bottom-links .website img {
     height: 1em;
-    /* aspect-ratio: 1/1; */
     margin-right: .5rem;
     transition: all ease-out .3s;
 }

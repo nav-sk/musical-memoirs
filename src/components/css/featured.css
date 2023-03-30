@@ -13,7 +13,7 @@ section.featured {
     font-size: 8rem;
     position: absolute;
     height: fit-content;
-    left:0;
+    left: 0;
     background: linear-gradient(90deg, #ffffff22 30%, #ffffffbb 100%);
     background-clip: text;
     color: transparent;
@@ -22,11 +22,11 @@ section.featured {
     padding-top: calc(3rem - 3px);
 }
 
-.featured div >h2:last-child{
+.featured div>h2:last-child {
     top: calc(350px - 3px);
 }
 
-.carousel-wrapper{
+.carousel-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -80,7 +80,7 @@ section.featured {
 }
 
 
-.carousel-content>img:hover{
+.carousel-content>img:hover {
     filter: grayscale(0);
 }
 
@@ -99,12 +99,10 @@ section.featured {
 .carousel-content>div>p {
     font-family: 'Fauna One', serif;
     font-size: 1.10rem;
-    /* font-weight: 400; */
     letter-spacing: 1.35px;
     word-spacing: 3px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    /* height: calc(1.6rem * 5); */
     -webkit-line-clamp: 6;
     text-overflow: ellipsis;
     overflow: hidden;

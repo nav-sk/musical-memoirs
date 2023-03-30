@@ -7,10 +7,13 @@ footer.contact {
     position: relative;
     background-color: #00000088;
 }
-footer.contact a{
+
+footer.contact a {
     color: white;
 }
-.contact::before, .contact::after {
+
+.contact::before,
+.contact::after {
     content: "";
     display: block;
     position: absolute;
@@ -26,15 +29,15 @@ footer.contact a{
     outline: 2px solid white;
 }
 
-.contact::before{
+.contact::before {
     left: 0;
 }
 
-.contact::after{
+.contact::after {
     right: 0;
 }
 
-.contact h2{
+.contact h2 {
     text-align: center;
     color: white;
     font-family: 'Cinzel';
@@ -53,7 +56,7 @@ footer.contact a{
     transition: filter ease 2s;
 }
 
-.contact .gmap_canvas:hover{
+.contact .gmap_canvas:hover {
     filter: grayscale(0);
 }
 
@@ -67,19 +70,17 @@ footer.contact a{
 .contact-main {
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
     justify-content: space-between;
     color: white;
 }
 
-.contact-address{
+.contact-address {
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
-    /* align-self: self-start; */
 }
 
-.contact-main h3{
+.contact-main h3 {
     font-family: 'Cinzel', serif;
     font-weight: 600;
     font-size: 1.5rem;
@@ -102,9 +103,9 @@ footer.contact a{
     overflow-y: hidden;
 }
 
-.site-links::before{
+.site-links::before {
     content: "";
-    height: 100% ;
+    height: 100%;
     width: 1px;
     background-color: white;
     z-index: -1;
@@ -119,17 +120,17 @@ footer.contact a{
     letter-spacing: .7px;
 }
 
-.site-links li{
-    list-style: none; 
+.site-links li {
+    list-style: none;
 }
 
 
-.site-links li::before{
+.site-links li::before {
     content: "\2666";
     padding-right: .5rem;
 }
 
-.site-links a{
+.site-links a {
     text-decoration: none;
     color: white;
 }
@@ -142,7 +143,7 @@ footer.contact a{
     height: fit-content;
 }
 
-.contact-details::before{
+.contact-details::before {
     content: "";
     height: 100%;
     width: 1px;
@@ -151,7 +152,7 @@ footer.contact a{
     background-color: white;
 }
 
-.contact-details p{
+.contact-details p {
     font-family: 'Fauna One', serif;
     line-height: 2rem;
     letter-spacing: .3px;
@@ -161,7 +162,7 @@ footer.contact a{
     margin: 0 .25rem;
 }
 
-.contact-details div > a> svg{
+.contact-details div>a>svg {
     width: 1.5rem;
     aspect-ratio: 1/1;
     height: 1.5rem;

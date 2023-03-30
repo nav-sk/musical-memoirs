@@ -13,7 +13,7 @@ const Mobile = props => {
 
 const Desktop = props => {
     return <header className="desktop">
-        <img src={logo}/>
+        <img src={logo} />
         <h1>Musical Memoirs</h1>
         <ul className="right">
             <Link to='/portfolio'><li>Portfolio</li></Link>

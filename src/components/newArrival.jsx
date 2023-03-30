@@ -18,7 +18,7 @@ const NewItem = (props) => {
                     <p>20 min read</p>
                     <p>12/03/2023</p>
                 </div>
-                <p className='read' onClick={e=>navigate('/article/'+e.currentTarget.getAttribute('data-id'))}>Read Now</p>
+                <p className='read' onClick={e => navigate('/article/' + e.currentTarget.getAttribute('data-id'))}>Read Now</p>
             </div>
         </div>
     </div>

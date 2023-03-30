@@ -19,7 +19,7 @@
     font-size: 2rem;
 }
 
-.new-arrival-main> h2[top=0]{
+.new-arrival-main>h2[top=0] {
     background: linear-gradient(black 50%, transparent);
 }
 
@@ -136,15 +136,15 @@
 .new-item-container {
     display: flex;
     flex-direction: row;
-    overflow: hidden; 
+    overflow: hidden;
     width: 100%;
     height: 100%;
     padding: .25rem;
-    transform: scale(1,1);
+    transform: scale(1, 1);
     transition: transform ease-in-out .2s;
 }
 
-.new-item-container:hover{
+.new-item-container:hover {
     transform: scale(.98, .96);
 }
 
@@ -158,7 +158,7 @@
     mask-image: linear-gradient(-90deg, transparent, black 60%);
 }
 
-.new-item-container:hover > img {
+.new-item-container:hover>img {
     filter: grayscale(0);
 }
 
@@ -185,7 +185,7 @@
     padding: 0 1rem 1rem;
 }
 
-.new-item-container >div > .read{
+.new-item-container>div>.read {
     position: absolute;
     bottom: -4rem;
     left: 50%;
@@ -202,7 +202,7 @@
     transition: bottom ease-out .2s, opacity ease-out .2s;
 }
 
-.new-item-container:hover >div > .read{
+.new-item-container:hover>div>.read {
     bottom: 0rem;
     opacity: 1;
 }

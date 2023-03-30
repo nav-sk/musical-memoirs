@@ -11,7 +11,6 @@ header h1 {
     border-width: 1px;
     position: absolute;
     left: 50%;
-    /* padding-top: rem; */
     transform: translateX(-50%);
 }
 
@@ -21,7 +20,7 @@ header ul {
     padding-left: 0;
 }
 
-header a{
+header a {
     color: white;
 }
 
@@ -62,12 +61,8 @@ header.desktop ul {
 header.desktop img {
     width: 3rem;
     aspect-ratio: 1/1;
-    /* margin-left: 1rem; */
 }
 
-/* header.desktop ul.left :not(:first-child) {
-    margin-left: 1.5rem;
-} */
 
 header.desktop ul.right :not(:last-child) {
     margin-right: 1.5rem;

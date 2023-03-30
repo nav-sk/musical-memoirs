@@ -1,9 +1,6 @@
-.App{
-    background: url('./music.png');
+.App {
+    background: url('../../assets/music.png');
     background-attachment: fixed;
     background-color: #000000cc;
     background-blend-mode: multiply;
-}
-.App{
-    
 }

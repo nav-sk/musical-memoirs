@@ -3,12 +3,12 @@
   box-sizing: border-box;
 }
 
-::selection{
+::selection {
   background-color: white;
   color: black;
 }
 
-html{
+html {
   background-color: black;
   scrollbar-gutter: stable;
   scrollbar-width: thin;
@@ -16,15 +16,16 @@ html{
 }
 
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   background-color: black;
   width: 2px;
 }
+
 ::-webkit-scrollbar-track {
   background-color: black;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: white;
   height: 1rem;
   border-radius: 10px;

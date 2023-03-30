@@ -9,7 +9,7 @@ const pageStyle = {
     alignItems: 'center'
 }
 
-const h1Style  = {
+const h1Style = {
     fontSize: '6rem',
     fontFamily: 'Redressed',
     color: 'white'
@@ -21,7 +21,7 @@ const capStyle = {
     fontWeight: '600'
 }
 
-export const Page404 = props =>{
+export const Page404 = props => {
     return <div style={pageStyle}>
         <h1 style={h1Style}>404</h1>
         <h2 style={capStyle}>The page you are looking for is not found</h2>
