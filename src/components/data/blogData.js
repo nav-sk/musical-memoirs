@@ -204,9 +204,9 @@ export const blogData = {
         avatarCaption: 'Yuvan Shankar Raja',
         albumLinks: [
             `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2H6sQAg5dthRU7592LpIgb?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
-            `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/634XiL0HdManH26qduu9Xw?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
-            `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/4ojPEY2ijMOIlQXU6dOUS5?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
-            `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/79crxQ8cTRX053j88cHks0?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+            `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/634XiL0HdManH26qduu9Xw?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+            `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/4ojPEY2ijMOIlQXU6dOUS5?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+            `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/79crxQ8cTRX053j88cHks0?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
         ],
         spotifyProfile: 'https://open.spotify.com/artist/6AiX12wXdXFoGJ2vk8zBjy?si=soSdOOHWQkq--vMGd20HGA',
         offlWebsite: 'https://twitter.com/thisisysr?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor',
