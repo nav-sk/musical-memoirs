@@ -1,3 +1,5 @@
+![banner](git-assets/musical-memoirs-banner.png)
+
 # 🎵 Musical Memoirs
 
 ## Welcome to Musical Memoirs!
@@ -9,6 +11,10 @@ But that's not all – we also embed Spotify albums so that you can listen to th
 Whether you're a die-hard fan or simply curious about the stories behind the music, Musical Memoirs is the perfect destination for you. Join us on a journey through the lives and careers of the world's most beloved music artists, and discover the human stories behind the biggest hits.
 
 Stay tuned for regular updates and new posts, and don't forget to follow us on social media for even more music-related content. Thanks for visiting Musical Memoirs!
+
+
+## 🎥 Sample 
+![Sample](git-assets/musical-memoirs.gif)
 
 ## 🧬 Tech Stack Used
 
